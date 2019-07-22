@@ -1,10 +1,21 @@
-#### 用Vuex重写todoList。
- 
+# todomvc-vux
 
-**将代码提交到自己的github账户，地址提交到这里。**
-### 要求
-* Git commit 小步提交
-* 每次提交的评论都有意义
+> A Vue.js project
 
+## Build Setup
 
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
