@@ -6,7 +6,7 @@
       <Footer></Footer>
     </section>
     <footer style="text-align:center;margin-top:120px;font:italic 700 16px">
-      By <a href="https://github.com/Disiye" target="_blank">emilo@oocl.com</a>
+      By <a href="https://github.com/Disiye" target="_blank">emilo.weng@oocl.com</a>
     </footer>
   </div>
 </template>
@@ -21,6 +21,14 @@ export default {
     Header,
     Main,
     Footer
+  },
+  created(){
+    this.getHttpAsync()
+  },
+  methods: {
+    getHttpAsync() {
+      this.$store.dispatch('getHttpAsync'); 
+    }
   }
 }
 </script>
