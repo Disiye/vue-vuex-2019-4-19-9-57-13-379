@@ -65,11 +65,7 @@ const actions = {
   },
 
   async addList (state,payload) {
-    state.state.todoList.push({
-      id: ++state.state.index,
-      text: payload.text,
-      complete: false
-    });
+
     axios({
       method: 'post',
       url: 'http://localhost:8080/todo-mvcs',
@@ -78,8 +74,19 @@ const actions = {
         "text": payload.text,
         "complete": false
       }
-    });
+    }).then(response => 
+        state.state.todoList.push({
+          id: ++state.state.index,
+          text: payload.text,
+          complete: false
+        }
+      )).catch(function (error) {
+        alert(error.response.data.message);
+      });
+    
   },
+
+
 
   async deleteListAsync (state,context) {
     axios({
