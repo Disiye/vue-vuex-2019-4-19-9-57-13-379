@@ -70,13 +70,13 @@ const actions = {
       method: 'post',
       url: 'http://localhost:8080/todo-mvcs',
       data: {
-        "id": state.state.index,
+        "id": ++state.state.index,
         "text": payload.text,
         "complete": false
       }
     }).then(response => 
         state.state.todoList.push({
-          id: ++state.state.index,
+          id: state.state.index,
           text: payload.text,
           complete: false
         }
