@@ -12,7 +12,7 @@
           <a>Completed</a>
         </li>
       </ul>
-      <button class="clear-completed" @click="clearCompletedAsync">Clear completed</button>
+      <a-button class="clear-completed" @click="clearCompletedAsync">Clear completed</a-button>
     </footer>
 </template>
 
